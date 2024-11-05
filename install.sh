@@ -107,4 +107,5 @@ if [[ ! -e $HOME/opt/miniconda3 ]]; then
 	source $HOME/opt/miniconda3/bin/activate
 	conda init
 	conda init zsh
+    pip install --user nvitop pre-commit
 fi
