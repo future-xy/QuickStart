@@ -25,6 +25,8 @@ git clone https://github.com/future-xy/QuickStart.git
 cd QuickStart
 bash install.sh
 bash config.sh
+
+chsh -s $(which zsh)
 ```
 
 ## Package Components
