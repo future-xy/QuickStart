@@ -10,5 +10,6 @@ sudo apt install rsync git build-essential -y
 	sudo apt update &&
 	sudo apt install gh -y
 
+sudo apt install tmux -y
 sudo apt install fd-find silversearcher-ag htop -y
 sudo apt install bat -y

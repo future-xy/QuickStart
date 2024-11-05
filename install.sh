@@ -44,12 +44,13 @@ cd $HOME/opt
 wget https://github.com/neovim/neovim/releases/download/stable/nvim-linux64.tar.gz
 tar xf nvim-linux64.tar.gz
 cd nvim-linux64
-rsync -avhu bin/* $HOME/.local/bin/
-rsync -avhu lib/* $HOME/.local/lib/
-rsync -avhu share/* $HOME/.local/share/
+rsync -ahu bin/* $HOME/.local/bin/
+rsync -ahu lib/* $HOME/.local/lib/
+rsync -ahu share/* $HOME/.local/share/
 git clone https://github.com/Chivier/ChivierLazyNvim.git ~/.config/nvim
 
 # tmux
+cd $QINDIR
 cp tmux.conf $HOME/.tmux.conf
 
 # zsh

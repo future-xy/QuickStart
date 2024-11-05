@@ -40,18 +40,16 @@ bash config.sh
 
 ### install
 
-1. Python virtual environment management: `pyenv`
-2. Vimrc: from [github/vimrc](https://github.com/amix/vimrc)
-3. Nvim and Nvim config: provided by [@Chivier](https://github.com/Chivier)
-4. zsh config: .zinit and zshrc
-5. tmux config: from [github/tmuxrc](https://github.com/rxrc/tmuxrc)
-6. lazygit: a cli git tool
+1. Vimrc: from [github/vimrc](https://github.com/amix/vimrc)
+2. Nvim and Nvim config: provided by [@Chivier](https://github.com/Chivier)
+3. zsh config: .zinit and zshrc
+4. tmux config: from [github/tmuxrc](https://github.com/rxrc/tmuxrc)
+5. lazygit: a cli git tool
+6. miniconda: a light weight anaconda
 
-### install Anaconda
+### config
 
-```bash
-pyenv install anaconda3-2024.02-1
-```
+1. Git config: user.name, user.email, editor
 
 ### install docker and docker-compose
 
