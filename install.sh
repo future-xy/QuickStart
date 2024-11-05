@@ -28,7 +28,7 @@ fi
 
 if [[ ! -e $HOME/opt ]]; then
 	mkdir -p $HOME/opt
-fi©
+fi
 
 # vimrc
 if [[ ! -e $HOME/.vim_runtime ]]; then
@@ -58,7 +58,7 @@ cp .tmux/.tmux.conf.local .
 # zsh
 cd $QINDIR
 
-tar xzvf zsh.tar.gz
+tar xzvf zsh.tar.gz 2>/dev/null
 
 if [[ ! -e $HOME/.oh-my-zsh ]]; then
 	mv .oh-my-zsh $HOME
