@@ -26,14 +26,9 @@ if [[ ! -e $HOME/.local/share ]]; then
 	mkdir -p $HOME/.local/share
 fi
 
-# Pyenv
-if [[ ! -e $HOME/.pyenv ]]; then
-	curl https://pyenv.run | bash
-fi
-
 if [[ ! -e $HOME/opt ]]; then
 	mkdir -p $HOME/opt
-fi
+fi©
 
 # vimrc
 if [[ ! -e $HOME/.vim_runtime ]]; then
@@ -87,19 +82,6 @@ cd .oh-my-zsh/custom/plugins
 rm -rf zenplash
 git clone https://github.com/Chivier/zenplash.git
 
-# Projects
-cd
-mkdir Projects
-
-# zellij
-if [[ ! -e $HOME/.local/bin/zellij ]]; then
-	wget https://github.com/zellij-org/zellij/releases/download/v0.40.1/zellij-x86_64-unknown-linux-musl.tar.gz
-	tar xzvf zellij-x86_64-unknown-linux-musl.tar.gz
-	chmod +x ./zellij
-	mv zellij $HOME/.local/bin/zellij
-	rm zellij-x86_64-unknown-linux-musl.tar.gz
-fi
-
 # lazygit
 if [[ ! -e $HOME/.local/bin/lg ]]; then
 	LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
@@ -116,4 +98,15 @@ if [[ ! -e $HOME/.local/bin/bat ]]; then
 fi
 if [[ ! -e $HOME/.local/bin/lg ]]; then
 	ln -s $(which lazygit) ~/.local/bin/lg
+fi
+
+# Miniconda
+if [[ ! -e $HOME/opt/miniconda3 ]]; then
+	cd $HOME/opt
+	wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+	bash Miniconda3-latest-Linux-x86_64.sh -b -p $HOME/opt/miniconda3
+	# Initialize conda
+	source $HOME/opt/miniconda3/bin/activate
+	conda init
+	# Update .bashrc or .zshrc
 fi
