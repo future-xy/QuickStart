@@ -58,7 +58,7 @@ cp .tmux/.tmux.conf.local .
 # zsh
 cd $QINDIR
 
-tar xzvf zsh.tar.gz 2>/dev/null
+tar xzf zsh.tar.gz
 
 if [[ ! -e $HOME/.oh-my-zsh ]]; then
 	mv .oh-my-zsh $HOME
@@ -108,5 +108,5 @@ if [[ ! -e $HOME/opt/miniconda3 ]]; then
 	# Initialize conda
 	source $HOME/opt/miniconda3/bin/activate
 	conda init
-	# Update .bashrc or .zshrc
+	conda init zsh
 fi
