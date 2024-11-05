@@ -50,10 +50,7 @@ rsync -avhu share/* $HOME/.local/share/
 git clone https://github.com/Chivier/ChivierLazyNvim.git ~/.config/nvim
 
 # tmux
-cd
-git clone https://github.com/gpakosz/.tmux.git
-ln -s -f .tmux/.tmux.conf
-cp .tmux/.tmux.conf.local .
+cp tmux.conf $HOME/.tmux.conf
 
 # zsh
 cd $QINDIR
