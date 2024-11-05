@@ -5,7 +5,7 @@ Quick Initailization Package
 ## Quick Start
 
 ```bash
-echo `sudo apt update
+echo 'sudo apt update
 sudo apt install zsh wget curl vim -y
 sudo apt install rsync git build-essential -y
 
@@ -18,7 +18,8 @@ sudo apt install rsync git build-essential -y
 	sudo apt install gh -y
 
 sudo apt install fd-find silversearcher-ag htop -y
-sudo apt install bat -y` > sudo_install.sh
+sudo apt install bat -y' > sudo_install.sh
+
 sudo bash sudo_install.sh
 git clone https://github.com/future-xy/QuickStart.git
 cd QuickStart
