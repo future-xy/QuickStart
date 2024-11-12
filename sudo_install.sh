@@ -1,6 +1,6 @@
 sudo apt update
 sudo apt install zsh wget curl vim -y
-sudo apt install rsync git build-essential -y
+sudo apt install rsync git build-essential tree -y
 
 (type -p wget >/dev/null || (sudo apt update && sudo apt-get install wget -y)) &&
 	sudo mkdir -p -m 755 /etc/apt/keyrings &&
