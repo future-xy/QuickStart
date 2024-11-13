@@ -15,7 +15,7 @@ export LC_ALL="en_US.utf8"
 # local env variables
 # THEME
 ZSH_THEME="chivier"
-plugins=(git colored-man-pages vi-mode zshmarks zenplash docker docker-compose)
+plugins=(git colored-man-pages vi-mode zshmarks docker docker-compose)
 source $ZSH/oh-my-zsh.sh
 
 ### Added by Zinit's installer
@@ -40,18 +40,6 @@ zinit light-mode for \
 
 zinit light zsh-users/zsh-autosuggestions
 zinit light zdharma/fast-syntax-highlighting
-
-# Plugin history-search-multi-word loaded with investigating.
-zinit load zdharma/history-search-multi-word
-zinit load zsh-users/zsh-history-substring-search
-
-# A glance at the new for-syntax – load all of the above
-# plugins with a single command. For more information see:
-# https://zdharma.org/zinit/wiki/For-Syntax/
-zinit for \
-    light-mode  zsh-users/zsh-autosuggestions \
-    light-mode  zdharma/fast-syntax-highlighting \
-                zdharma/history-search-multi-word 
 ### End of Zinit's installer chunk
 
 # Load a few important annexes, without Turbo
@@ -63,3 +51,6 @@ zinit light-mode for \
     zinit-zsh/z-a-bin-gem-node
 
 ### End of Zinit's installer chunk
+
+setopt no_share_history
+unsetopt share_history
