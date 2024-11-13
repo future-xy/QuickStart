@@ -47,7 +47,7 @@ cd nvim-linux64
 rsync -ahu bin/* $HOME/.local/bin/
 rsync -ahu lib/* $HOME/.local/lib/
 rsync -ahu share/* $HOME/.local/share/
-git clone https://github.com/Chivier/ChivierLazyNvim.git ~/.config/nvim
+git clone https://github.com/future-xy/LazyNvim.git ~/.config/nvim
 
 # tmux
 cd $QINDIR
@@ -76,9 +76,6 @@ chown -R $USER .zinit
 chown -R $USER .zshrc
 
 cd
-cd .oh-my-zsh/custom/plugins
-rm -rf zenplash
-git clone https://github.com/Chivier/zenplash.git
 
 # lazygit
 if [[ ! -e $HOME/.local/bin/lg ]]; then
